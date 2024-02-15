@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { SearchBoxComponent } from '../../../shared/component/search-box/search-box.component';
+import { SearchBoxComponent } from '../../../shared/component/searchBox/searchBox.component';
 
 @Component({
   selector: 'app-by-capital-page',
@@ -9,11 +9,7 @@ import { SearchBoxComponent } from '../../../shared/component/search-box/search-
   styles: ``
 })
 export class ByCapitalPageComponent {
-  searchTerm: string = '';
-
   handleSearchTextChange(searchText: string) {
-    this.searchTerm = searchText;
-    console.log('Texto de búsqueda:', searchText);
-    // Aquí puedes realizar acciones adicionales, como llamar a un servicio para buscar datos, etc.
+    console.log("Texto de búsqueda:", searchText);
   }
 }

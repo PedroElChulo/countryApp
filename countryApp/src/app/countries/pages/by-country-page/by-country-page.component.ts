@@ -1,12 +1,16 @@
 import { Component } from '@angular/core';
-
+import { SearchBoxComponent } from '../../../shared/component/searchBox/searchBox.component';
 @Component({
   selector: 'app-by-country-page',
   standalone: true,
-  imports: [],
+  imports: [SearchBoxComponent],
   templateUrl: './by-country-page.component.html',
   styles: ``
 })
 export class ByCountryPageComponent {
 
+
+  handleSearchTextChange(searchText: string) {
+    console.log("Texto de búsqueda:", searchText);
+  }
 }

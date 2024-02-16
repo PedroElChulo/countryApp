@@ -1,0 +1,48 @@
+<!--<div>
+    <h2>Results by Capital</h2>
+    <ul *ngFor="let dato of pais">
+      <li>
+        <img [src]="dato.flags.png" alt="{{ dato.flags.alt}} Flag" width="50" height="30" />
+      </li>
+      <li>
+        <strong>Pais:</strong> {{ dato.pais.common }} 
+      </li>
+      <li>
+        <strong>Capital:</strong> {{ dato.capital }} 
+      </li>
+      <li>
+        <strong>Population:</strong> {{ dato.population | number }} 
+      </li>
+    </ul>
+  </div>-->
+  <div ngIf="countries.length === 0; else table" class="alert alert-warning text-center">
+    No hay países que mostrar...
+  </div>
+
+  <ng-template #table>
+    <div class="table-responsive">
+      <table class="table table-hover">
+        <thead>
+          <tr>
+            <th>#</th>
+            <th>Flag</th>
+            <th>Name</th>
+            <th>Capital</th>
+            <th>Population</th>
+            <th>Ver más</th>
+          </tr>
+        </thead>
+        <tbody>
+          <trngFor="let dato of countries; let i = index>
+            <td>{{ i + 1 }}</td>
+            <td ><img src="{{dato.coatOfArms.svg}}" alt="icono of {{dato.pais.common}}" width="30" height="30"></td>
+            <td><img [src]="dato.flags.png" alt="{{ dato.flags.alt }} Flag" width="50" height="30" /></td>
+            <td>{{ dato.name.common }}</td>
+            <td>{{ dato.capital }}</td>
+            <td>{{ dato.population | number }}</td>
+            <td><a href="#">Ver más...</a></td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </ng-template>

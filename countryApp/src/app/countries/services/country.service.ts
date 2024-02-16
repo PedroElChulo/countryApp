@@ -15,7 +15,7 @@ export class CountryService {
     return this.http.get<Country[]>(`${this.apiUrl}capital/${capital}`);
   }
 
-  getByCountry(pais: string): Observable<Country[]> {
+  getByPais(pais: string): Observable<Country[]> {
     return this.http.get<Country[]>(`${this.apiUrl}pais/${pais}`);
   }
 
@@ -23,7 +23,4 @@ export class CountryService {
     return this.http.get<Country[]>(`${this.apiUrl}region/${region}`);
   }
 
-  getAllCountries(): Observable<Country[]> {
-    return this.http.get<Country[]>(`${this.apiUrl}all`);
-  }
 }

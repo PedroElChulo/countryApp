@@ -2,10 +2,12 @@ import { Component } from '@angular/core';
 import { SearchBoxComponent } from '../../../shared/component/searchBox/searchBox.component';
 import { Country } from '../../interfaces/country';
 import {CountryService} from '../../services/country.service'
+import { CountryTableComponent } from '../../components/country-table/country-table.component';
+import { CommonModule } from '@angular/common';
 @Component({ 
   selector: 'app-by-capital-page',
   standalone: true,
-  imports: [SearchBoxComponent],
+  imports: [SearchBoxComponent,CountryTableComponent,CommonModule],
   templateUrl: './by-capital-page.component.html',
   styles: ``
 })

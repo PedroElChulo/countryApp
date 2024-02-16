@@ -1,9 +1,6 @@
 export interface Country {
-    //pais: string;
-    //capital: string;
-    //region: string;
-  pais:{
-    connon:String;
+  name:{
+    common:String;
   };
   capital:String;
   region:String;
